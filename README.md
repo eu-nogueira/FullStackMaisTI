@@ -1,4 +1,4 @@
-Para a execução correta das atividades 1 a 15 do primeiro módulo será necessaria a instalação do Node.js e também do Prompt-Sync(npm install "Prompt-Sync").
+!
 
 
 
