@@ -1,0 +1,16 @@
+ul {
+    background-color: #dbdbdb;
+}
+li {
+    border: 1px solid black;
+    border-radius: 5px;
+    color: blue;
+}
+li:hover {
+    background-color: #7d7d7d;
+    transition: 2s;
+}
+.verde {
+    color: green;
+    font-style: italic;
+}
