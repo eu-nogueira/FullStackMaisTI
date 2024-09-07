@@ -1,0 +1,32 @@
+body {
+    background-color: #dbdbdb;
+}
+form {
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: sans-serif;
+    
+}
+.enviar {
+    background-color: #dbdbdb;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.enviar:hover {
+    background-color: aquamarine;
+    transition: 1s;
+}
+b {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.check, .assunt {
+    cursor: pointer;
+}
