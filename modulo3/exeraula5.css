@@ -1,0 +1,39 @@
+form {
+    margin: auto;
+    text-align: center;
+    max-width: 400px;
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+body {
+    background-color: #dbdbdb;
+}
+.masc, .fem {
+    display: inline;
+    width: 20px;
+}
+label {
+    font-weight: bold;
+
+}
+.termos {
+    width: 20px;
+}
+button {
+    border: none;
+    background-color: rgb(64, 64, 255);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+}
+button:hover {
+    background-color: blue;
+}
+input, select, button {
+    width: 100%;
+}
+.genero {
+    display: inline-block;
+}

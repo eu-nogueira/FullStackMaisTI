@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulários</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <form>
+        <h1>Cadastro de evento</h1>
+        <label for="Nome Completo">Nome Completo: </label>
+        <input type="text" id="nome" name="nome" placeholder="Nome">
+        <br>
+        <br>
+        <label for="email">email: </label>
+        <input type="email" id="email" name="email" placeholder="Nogueira21@teste.com">
+        <br>
+        <br>
+        
+        <label for="Senha">Senha: </label>
+        <input type="password" id="Senha" name="Senha" placeholder="Senha">
+        <br>
+        <br>
+        
+        <label for="Confirma senha">Confirme a senha:</label>
+        <input type="password" id="confirma senha" name="confirma senha" placeholder="Confirmação">
+        <br>
+        <br>
+        
+        <label for="Genero">Genero: </label>
+        <select name="genero" id="genero">
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+        </select>
+        <br>
+        <br>
+        <select name="pais" id="pais">País
+            <option value="" disabled selected>Escolha um país</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Portugal">Portugal</option>
+            <option value="EUA">EUA</option>
+        </select>
+        <br>
+        <br>
+        <label for="data de nascimento">Data De Nascimento:</label>
+        <input type="date" id="data" name="data">
+        <br>
+        <br>
+        <label for="estado">Estado: </label>
+        <select name="estado" id="estado">
+            <option value="" disabled selected>Escolha uma opção</option>
+            <option value="estado">Rio Grande Do Sul</option>
+            <option value="estado">Rio de janeiro</option>
+            <option value="estado">Rio Grande Do Norte</option>
+            <option value="estado">Rio Grande</option>
+        </select>
+        <br>
+        <br>
+        <fieldset>
+            <legend>preferencia de comunicação</legend>
+            <input type="checkbox" id="email-novidades" value="email-novidades">
+            <label for="email-novidades">Receber atualizações por email.</label>
+            
+            <input type="checkbox" id="sms-novidades" name="sms-novidades" value="sms-novidades">
+            <label for="sms-novidades">Receber atualizações por sms.</label>
+        </fieldset>
+        <br>
+        <br>
+        <label for="foto perfil">Foto de perfil:</label>
+        <input type="file" id="fotoPerfil" name="fotoPerfil">
+        <button class="botao">cadastrar</button>
+    </form>
+</body>
+</html>

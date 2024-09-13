@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link rel="stylesheet" href="exeraula5.css">
+</head>
+<body>
+    <form>
+        <h1>Cadastro e-commerce</h1>
+
+        <label for="Nome Completo">Nome completo:</label>
+        <input type="text" id="Nome" name="Nome" placeholder="Nome">
+        <br>
+        <br>
+
+        <label for="email">email:</label>
+        <input type="email" id="email" name="email" placeholder="email">
+        <br>
+        <br>
+        
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" placeholder="Senha">
+        <br>
+        <br>
+        
+        <label for="pais">País:</label>
+        <select name="pais" id=pais">
+            <option value="" disabled selected>Escolha o país</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brasil">Portugal</option>
+        </select>
+        <br>
+        <br>
+        <label for="genero">Gênero:</label>
+        <input type="radio" class="masc" name="gener"> Masculino
+        <input type="radio" class="fem" name="gener"> Feminino
+        <br>
+        <br>
+
+        <label for="termos">Aceite os <u><b>termos</b></u>
+            <input type="checkbox" name="termos" class="termos">
+        </label>
+        <br>
+        <br>
+
+        <label for="enviar"></label>
+        <button class="enviar">Enviar</button>
+    </form>
+</body>
+</html>
