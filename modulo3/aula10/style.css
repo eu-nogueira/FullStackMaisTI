@@ -1,0 +1,25 @@
+.Menu {
+    padding: -10px;
+    margin: -20px -8px;
+    background-color: black;
+    height: 70px;
+}
+
+.list {
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+    list-style: none;
+}
+
+li {
+    color: white;
+    padding: 10px;
+    margin: 15px;
+}
+
+li:hover {
+    background-color: #dbdbdb;
+    transition: 1s;
+    border-radius: 5px;
+}
