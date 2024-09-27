@@ -2,6 +2,7 @@ const newTar = document.querySelector('.newTar')
 const add = document.querySelector('.add')
 const list = document.querySelector('.list')
 const concluido = document.querySelector('.concluido')
+let todas = []
 add.addEventListener('click', function () {
     if (newTar.value) {
 
@@ -18,11 +19,16 @@ add.addEventListener('click', function () {
         btnRem.addEventListener('click', function () {
             li.remove()
         })
+        li.addEventListener('click', function (e) {
+            todas.push(li.textContent)
+            li.style.textDecoration = 'line-through'
+        })
 
-        concluido.addEventListener('click', function() {
-            let todas = []
-            todas.push(newTar.value)
-            li.replaceChild(li, todas)
+        concluido.addEventListener('click', function (e) {
+            const el = e.target
+            if(el.classList.contains('textDecoration')) {
+                list.appendChild(el.textContent)
+            }
         })
     }
 })
