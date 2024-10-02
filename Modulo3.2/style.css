@@ -10,13 +10,13 @@ ul {
     margin: auto;
 }
 
-a {
+.link-menu {
     padding: 0px 20px;
     text-decoration: none;
     color: white;
     font-family: sans-serif;
 }
-a:hover {
+.link-menu:hover {
     color: rgb(66, 34, 87);
     transition: 1s;
     font-size: 15pt;
@@ -37,10 +37,36 @@ body {
     margin-top: 60px;
 }
 
+#logo {
+    position: relative;
+    top: -3px;
+    margin-left: 20px;
+}
+
 .legend {
     position: absolute;
     right: 10px;
     top: 150px;
-    width: 400px;
+    width: 380px;
     font-family: sans-serif;
+}
+
+.falaCeo {
+    font-style: italic;
+    color: white;
+}
+
+.fontes {
+    color: #dbdbdb;
+}
+
+.numerada {
+    color: white;
+}
+
+.rodape {
+    margin-top: 200px;
+    text-align: center;
+    color: white;
+    border-top: 1px solid rgb(66, 34, 87);
 }
