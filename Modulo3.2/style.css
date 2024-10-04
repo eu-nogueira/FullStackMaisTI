@@ -7,7 +7,7 @@ h4 {
     padding: 10px;
 }
 ul {
-    margin: auto;
+    margin-left: 370px;
 }
 
 .link-menu {
@@ -22,7 +22,16 @@ ul {
     font-size: 15pt;
 }
 body {
-    background-image: linear-gradient(to right, rgb(0, 0, 212), black);
+    background: linear-gradient(to right, rgb(0, 0, 212), black);
+}
+
+.Prpage {
+    position: absolute;
+    color: #dbdbdb;
+    top: 15px;
+    font-family: sans-serif;
+    opacity: 0.4;
+    font-size: 10pt;
 }
 
 #carrosel {
@@ -74,4 +83,18 @@ body {
 
 .carousel-inner:hover {
     opacity: 0.4;
+    transition: 1s;
+}
+
+form {
+    background-color: white;
+    width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 50px 0px;
+    border-radius: 5px;
+}
+input {
+    border: none;
+    border-bottom: 1px solid #dbdbdb;
 }
