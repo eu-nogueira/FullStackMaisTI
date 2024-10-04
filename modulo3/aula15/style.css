@@ -1,0 +1,22 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+h2 {
+    border-bottom: 1px solid #dbdbdb;
+    padding: 5px 50px;
+    height: 40px;
+}
+
+form {
+    padding: 30px 50px;
+}
+
+input {
+    width: 120px;
+    padding: 5px 10px;
+}
+.cep {
+    width: 80px;
+    padding: 5px 10px;
+}
