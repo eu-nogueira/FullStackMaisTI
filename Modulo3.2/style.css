@@ -98,3 +98,8 @@ input {
     border: none;
     border-bottom: 1px solid #dbdbdb;
 }
+
+#newBtn:hover {
+    box-shadow: 15px 10px 5px rgba(0, 0, 0, 0.4);
+    transition: 1s;
+}
