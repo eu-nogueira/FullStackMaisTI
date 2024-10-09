@@ -6,7 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta de endereço</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script15.js" defer></script>
+    <script>
+        function getAddres(cep) {
+            cep = cep.replace(/\D/g, '') // remove tudo que não for numero
+
+            if(cep.length !== 8){
+                console.error(cep)  
+            }
+
+            let url = 'https://viacep.com.br/ws/' + cep + '/json/'
+
+            const xmlHttp = new XMLHttpRequest()
+
+            xmlHttp.open('GET', url, true)
+
+            xmlHttp.onreadystatechange = () => {
+                if (xmlHttp.readyState === 4) {
+                    if (xmlHttp.status === 200) {
+                        let data = JSON.parse(xmlHttp.responseText)
+
+
+                        document.querySelector('.endereco').value = data.logradouro
+                        document.querySelector('.bairro').value = data.bairro
+                        document.querySelector('.cidade').value = data.localidade
+                        document.querySelector('.UF').value = data.uf
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
