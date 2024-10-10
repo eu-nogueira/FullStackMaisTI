@@ -8,14 +8,14 @@ class Task {
     }
 
     validateData() {
-        for (let key in this){
-            if(this[key] === undefined || this[key] === ""){
+        for (let key in this){ // percorrer um objeto
+            if(this[key] === undefined || this[key] === ""){ 
                 console.error(`O campo ${key} é obrigatório.`)
 
-                return false
+                return false // se não valido retorna false
             }
         }
-        return true
+        return true // se valido retorna true
     }
 }
 
@@ -49,16 +49,17 @@ class Database {
     }
 
     createTask(task) {
-        let id = this.getNextId()
-        localStorage.setItem(id, JSON.stringify(task))
-        localStorage.setItem('id', id.toString())
+        let id = this.getNextId() // Sempre que salvar task pega o próximo ID(começar do 1)
+        // local storage = API
+        localStorage.setItem(id, JSON.stringify(task)) // setItem para salvar no local storage.
+        localStorage.setItem('id', id.toString()) // salvar "apenas" string no local storage e salvar id como task.
     }
     
     removeTask(id){
         localStorage.removeItem(id)
     }
 
-    searchTasks(task){}
+    searchTasks(searchTask){}
 
     getNextId(){
         let currentId = localStorage.getItem('id')
@@ -75,10 +76,10 @@ function registerTask(){
     let type = document.getElementById('type').value
     let description = document.getElementById('description').value
 
-    let task = new Task(year, month, day, type, description)
+    let task = new Task(year, month, day, type, description) // passa para o constructor
 
-    if(task.validateData()){
-        database.createTask(task)
+    if(task.validateData()){ // se dados estiverem validos
+        database.createTask(task) // passando task por parametro para "classe"
         alert('Tarefa criada com sucesso!')
     } else {
         alert('Preencha todos os campos.')
