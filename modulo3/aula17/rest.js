@@ -24,4 +24,29 @@ console.log(soma(...numeros))
     return numeros.reduce((total, numero) => total + numero)
 }
 
-console.log(soma(1,2,3,4,5)) */
+console.log(soma(1,2,3,4,5)) 
+
+
+function calculaMedia(...numeros) {
+    let soma = numeros.reduce((total,numero) => total + numero)
+    return soma/numeros.length
+}
+
+console.log(calculaMedia(50,70,100,30))
+
+let cadastroAnt = {
+    nome: 'Marcos',
+    idade: 18,
+    profissao: 'Dev'
+}
+
+let novoCadast = {...cadastroAnt, endereco: 'Rua nevada, 40'}
+
+console.log(novoCadast)
+*/
+
+let num = [4,5,6]
+let newNum = [1,2,3, ...num, 7,8,9]
+
+console.log(newNum)
+
