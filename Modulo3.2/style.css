@@ -41,7 +41,7 @@ body {
 }
 
 .main {
-    width: 500px;
+    width: 70%;
     height: 300px;
     margin-left: 150px;
     margin-top: 60px;
@@ -57,7 +57,7 @@ body {
     position: absolute;
     right: 10px;
     top: 150px;
-    width: 380px;
+    width: 30%;
     font-family: sans-serif;
 }
 

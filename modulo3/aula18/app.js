@@ -1,11 +1,8 @@
-const { default: Swiper } = require("swiper")
-const { Pagination, Navigation } = require("swiper/modules")
-
-document.addEventListener('DOMContentLoaded', () => {
-    let swiper = new Swiper('.swiper', {
+document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.swiper', {
         direction: 'horizontal',
-        loop: true,
-        Pagination: {
+        loop: false,
+        pagination: {
             el: '.swiper-pagination'
         },
 
@@ -15,11 +12,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    document.addEventListener('keydown', (event) => {
+    document.addEventListener('keydown', function (event) {
         if (event.key === 'ArrowLeft') {
             swiper.slidePrev()
         } else if (event.key === 'ArrowRight') {
             swiper.slideNext()
         }
     })
+
+    const gameInput = document.getElementById('gameInput')
+
+    gameInput.addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            let searchGame = gameInput.value.trim().toUpperCase()
+
+            switch (searchGame) {
+                case 'MARIO':
+                    swiper.slideTo(0)
+                    break
+                case 'POKEMON':
+                    swiper.slideTo(1)
+                    break
+                default:
+                    alert('Jogo não foi encontrado');
+                    break
+            }
+        }
+    })
+
+
 })
