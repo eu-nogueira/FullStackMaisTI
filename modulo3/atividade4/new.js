@@ -18,7 +18,8 @@ button.addEventListener('click', function() {
 
     var params = {
         sendername: document.querySelector('#sendername').value,
-        to: document.querySelector('#to').value,
+        to: "marcosr.nog21@gmail.com",
+        reply: document.querySelector('#to'),
         message: document.querySelector('#message').value
     }
 
