@@ -3,7 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #024346;
     color: white;
@@ -54,26 +56,6 @@ header {
     box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.6);
 }
 
-.search {
-    position: absolute;
-    right: 60px;
-    top: 5%;
-}
-
-.search input {
-    border-radius: 30px;
-    padding: 10px;
-    max-width: 150px;
-    background-color: #001b1a;
-    border: none;
-    transition: 1s;
-    color: white;
-}
-
-.search input:hover {
-    max-width: 300px;
-}
-
 .main-container {
     display: flex;
 }
@@ -87,7 +69,7 @@ header {
     text-align: center;
 }
 
-p {
+.sobre p {
     margin: 20px auto;
     width: 500px;
 }
@@ -112,9 +94,59 @@ p {
     color: #087476;
 }
 
+h3 {
+    text-align: center;
+}
+
+.testemunhos {
+    display: flex;
+}
+
 .test {
     width: 200px;
-    height: 200px;
+    padding: 20px;
     border: 1px solid black;
-    margin: 100px auto
+    margin: 100px auto;
+    text-align: center;
+    background-color: #001b1a;
+}
+
+.test img {
+    border-radius: 50%;
+}
+
+.test p {
+    margin-top: 5px;
+}
+
+form {
+    background-color: white;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+input, textarea {
+    margin: 10px;
+    border: none;
+    border-bottom: 1px solid #dbdbdb;
+    text-align: center;
+}
+
+form button {
+    padding: 5px;
+    background-color: #087476;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rodape {
+    border-top: 1px solid white;
+    margin-top: 40px;
+    padding-top: 10px;
+    text-align: center;
 }
