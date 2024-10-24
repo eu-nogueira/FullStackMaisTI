@@ -32,7 +32,7 @@ header {
 }
 
 .logo:hover {
-    transform: rotatey(180deg);
+    transform: rotatey(360deg);
 }
 
 .list {
@@ -143,20 +143,22 @@ form button {
     border-radius: 5px;
     cursor: pointer;
 }
-
-.rodape {
-    border-top: 1px solid white;
-    margin-top: 40px;
-    padding-top: 10px;
-    text-align: center;
-}
-
 @media (max-width: 600px) {
     header {
         flex-direction: column;
     }
+    .menu {
+        height: 150px;
+    }
+    .swiper-wrapper {
+        height: 300px;
+    }
+    .swiper-wrapper img{
+        max-height: 250px;
+    }
     .logo {
         left: 0;
+        margin-bottom: 10px;
     }
     .test img {
         width: 100%;
@@ -178,7 +180,7 @@ form button {
         width: 90%;
     }
     .conserto {
-        width: 90%;
+        width: 100%;
         margin: 20px 0;
     }
     .swiper {
@@ -202,8 +204,15 @@ form button {
     }
 }
 
+
 @media (min-width: 1024px) {
     .main-container {
         justify-content: space-around;
     }
+}
+.rodape {
+    border-top: 1px solid white;
+    margin-top: 40px;
+    padding-top: 10px;
+    text-align: center;
 }
