@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#main-container {
+    max-height: 100vh;
+    border: 1px solid;
+    width: 400px;
+    margin: auto;
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.6);
+}
+
+#conteudo {
+    background-color: #fec49b;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.lista {
+    background-color: #fe9b91;
+    list-style: none;
+    padding: 0;
+}
+
+.lista li {
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.lista li button {
+    border: none;
+    border-radius: 5px;
+    padding: 3px 10px;
+    transition: 0.5s;
+}
+
+.lista li button:hover {
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.6);
+    background-color: #ff5946;
+}

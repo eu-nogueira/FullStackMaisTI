@@ -5,7 +5,7 @@ let lista = document.querySelector('.lista');
 class Tarefa {
     constructor(description, id) {
         this.Description = description;
-        this.id = id || Itens.getNextId();
+        this.id = id || Itens.getNextId(); // Atribuir um ID único à tarefa
     }
 
     validaTarefa() {
@@ -25,7 +25,7 @@ class Itens {
 
     initDatabase() {
         const id = localStorage.getItem('id');
-        if (id === null) {
+        if (id === null || id) {
             localStorage.setItem('id', '0');
         }
     }
@@ -48,19 +48,13 @@ class Itens {
     }
 
     criaTarefa(tarefa) {
-        let id = tarefa.id;
-        localStorage.setItem(id, JSON.stringify(tarefa));
-        localStorage.setItem('id', id.toString());
+        let id = tarefa.id; // Utilizar o ID atribuído na criação da tarefa
+        localStorage.setItem(id, JSON.stringify(tarefa)); // Salvar a tarefa com o ID
+        localStorage.setItem('id', id.toString()); // Atualizar o ID no localStorage
     }
 
     removerTarefa(id) {
         localStorage.removeItem(id);
-    }
-
-    updateTarefa(id, newDescription) {
-        let task = JSON.parse(localStorage.getItem(id));
-        task.Description = newDescription;
-        localStorage.setItem(id, JSON.stringify(task));
     }
 
     static getNextId() {
@@ -72,13 +66,13 @@ class Itens {
 const itens = new Itens();
 
 button.addEventListener('click', function () {
-    let task = new Tarefa(cont.value);
+    let task = new Tarefa(cont.value); // Criar uma nova instância de Tarefa
 
     if (task.validaTarefa()) {
         itens.criaTarefa(task);
-        cont.value = '';
-        loadTasks();
+        alert(`Tudo certo`);
     }
+    loadTasks(); // Carregar a lista de tarefas após criar uma nova
 });
 
 function loadTasks(tasks = itens.carregarTarefa()) {
@@ -86,44 +80,23 @@ function loadTasks(tasks = itens.carregarTarefa()) {
 
     tasks.forEach((task) => {
         let linha = document.createElement('li');
-        linha.style.display = 'flex';
-        linha.style.justifyContent = 'space-between';
-        linha.style.alignItems = 'center';
-
-        let descricao = document.createElement('span');
-        descricao.innerHTML = `${task.Description}`;
-
         let btn = document.createElement('button');
         btn.textContent = 'Excluir';
-        btn.style.marginLeft = '10px';
-
-        let btnUpdate = document.createElement('button');
-        btnUpdate.textContent = 'Editar';
-        btnUpdate.style.backgroundColor = 'rgb(184, 255, 184)';
-        btnUpdate.style.marginLeft = '10px';
-
+        linha.style.listStyle = 'none';
+        linha.innerHTML = `${task.Description}`;
         btn.onclick = () => {
             if (confirm('Tem certeza que deseja excluir este item?')) {
                 itens.removerTarefa(task.id);
-                loadTasks();
+                loadTasks(); // Carregar a lista de tarefas após remover uma
             }
         };
-
-        btnUpdate.onclick = () => {
-            let newText = prompt('Digite a nova descrição', task.Description);
-            if (newText !== null) {
-                itens.updateTarefa(task.id, newText);
-                loadTasks();
-            }
-        };
-
-        linha.appendChild(descricao);
-        linha.appendChild(btn);
-        linha.appendChild(btnUpdate);
         lista.appendChild(linha);
+        linha.appendChild(btn);
     });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadTasks();
+    if (document.body.contains(document.querySelector('.lista'))) {
+        loadTasks();
+    }
 });
