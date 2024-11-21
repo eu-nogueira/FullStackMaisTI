@@ -1,4 +1,6 @@
+
 document.addEventListener('DOMContentLoaded', function () {
+
     const swiper = new Swiper('.swiper', {
         direction: 'horizontal',
         loop: false,
@@ -10,35 +12,41 @@ document.addEventListener('DOMContentLoaded', function () {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
         }
-    })
+    });
+
 
     document.addEventListener('keydown', function (event) {
         if (event.key === 'ArrowLeft') {
-            swiper.slidePrev()
+
+            swiper.slidePrev();
         } else if (event.key === 'ArrowRight') {
-            swiper.slideNext()
+
+            swiper.slideNext();
         }
-    })
-
-    const gameInput = document.getElementById('gameInput')
-
-    gameInput.addEventListener('keypress', function (event) {
-        if (event.key === 'Enter') {
-            let searchGame = gameInput.value.trim().toUpperCase()
-
-            switch (searchGame) {
-                case 'MARIO':
-                    swiper.slideTo(0)
-                    break
-                case 'POKEMON':
-                    swiper.slideTo(1)
-                    break
-                default:
-                    alert('Jogo não foi encontrado');
-                    break
-            }
-        }
-    })
+    });
+});
 
 
-})
+const mobileMenu = document.querySelector('.mobile-menu');
+const sidebar = document.querySelector('.sidebar');
+
+
+mobileMenu.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+});
+
+const buyButtons = document.querySelectorAll(".square-button");
+const modal = document.querySelector("#modal");
+const fade = document.querySelector("#fade");
+const closeModalButton = document.querySelector("#close-modal");
+
+const toggleModal = () => {
+    modal.classList.toggle("hide");
+    fade.classList.toggle("hide");
+};
+
+buyButtons.forEach((button) => {
+    button.addEventListener("click", () => toggleModal());
+});
+closeModalButton.addEventListener("click", () => toggleModal());
