@@ -36,17 +36,32 @@ mobileMenu.addEventListener('click', () => {
     mobileMenu.classList.toggle('active');
 });
 
-const buyButtons = document.querySelectorAll(".square-button");
-const modal = document.querySelector("#modal");
-const fade = document.querySelector("#fade");
-const closeModalButton = document.querySelector("#close-modal");
+let modal = document.querySelector('.modal')
+let modal2 = document.querySelector('.modal2')
+let modal3 = document.querySelector('.modal3')
+let newModal = document.querySelector('.showModal')
+let newModal2 = document.querySelector('.showModal2')
+let newModal3 = document.querySelector('.showModal3')
+let banner = document.querySelector('.banner')
 
-const toggleModal = () => {
-    modal.classList.toggle("hide");
-    fade.classList.toggle("hide");
-};
+modal.addEventListener('click', function () {
+    newModal.showModal()
+    banner.style.opacity = '0.3'
+})
 
-buyButtons.forEach((button) => {
-    button.addEventListener("click", () => toggleModal());
-});
-closeModalButton.addEventListener("click", () => toggleModal());
+modal2.addEventListener('click', function () {
+    newModal2.showModal()
+    banner.style.opacity = '0.3'
+})
+
+modal3.addEventListener('click', function () {
+    newModal3.showModal()
+    banner.style.opacity = '0.3'
+})
+
+function closeModal() {
+    newModal.close()
+    newModal2.close()
+    newModal3.close()
+    banner.style.opacity = '1'
+}

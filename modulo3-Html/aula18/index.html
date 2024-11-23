@@ -46,7 +46,7 @@
             </ul>
 
             <div class="login">
-                <button class="button" onclick="validateEmail()">Login</button>
+                <button class="button">Login</button>
                 <input type="email" id="emailInput" class="logar" placeholder="Enter your email">
             </div>
 
@@ -77,6 +77,33 @@
                                     <span class="subtitle">Super Mario Odyssey</span>
                                     <h4>COMPRE AGORA</h4>
                                     <span>Plataforma, Aventura, Ação</span>
+                                    <p class="modal">Saiba mais!</p>
+                                    <dialog class="showModal">
+                                        <button onclick="closeModal()">X</button>
+                                        <br>
+                                        <p>Super Mario Odyssey é um jogo de plataforma 3D, parte da série Super Mario da
+                                            Nintendo.
+                                            O jogo segue Mario em sua busca para salvar a Princesa Peach de seu
+                                            casamento forçado com Bowser. O jogo começa com Mario lutando contra Bowser
+                                            em sua aeronave. Bowers derruba Mario do navio e rasga seu boné em pedaços.
+                                            Mario desperta no Cap Kingdom habitado por espíritos semelhantes a chapéus e
+                                            faz amizade com um deles chamado Cappy. Acontece que Bowser também
+                                            sequestrou a irmã de Cappy, Tiara, e agora os heróis devem perseguir Bowser
+                                            por vários reinos para salvar Peach e Tiara.
+                                            A jogabilidade de Super Mario Odyssey é inspirada em Super Mario 64 e Super
+                                            Mario Sunshine. O jogo consiste em 17 níveis (chamados de “reinos”). Na
+                                            maioria deles, seu objetivo é coletar uma certa quantidade de Power Moons.
+                                            Coletar o suficiente deles permite que o jogador avance para o próximo
+                                            reino. Algumas luas podem ser encontradas em diferentes partes do nível ou
+                                            adquiridas como recompensa por completar certas tarefas ou desafios. O
+                                            conjunto de movimentos do Mario se assemelha principalmente ao de Super
+                                            Mario 64 e inclui saltos na parede, saltos triplos, cambalhotas, saltos
+                                            longos, rolando no chão. O principal novo recurso de jogabilidade é que
+                                            Mario pode jogar seu chapéu para criar plataformas temporárias, pegar
+                                            objetos, atacar inimigos ou possuí-los. Possuir inimigos lhe dá novos
+                                            movimentos e às vezes é necessário alcançar certas partes do nível.
+                                        </p>
+                                    </dialog>
                                 </div>
                             </div>
                         </div>
@@ -120,6 +147,20 @@
                                     <span class="subtitle">Pokemon Legends: Arceus</span>
                                     <h4>COMPRE AGORA</h4>
                                     <span>Plataforma, Aventura, RPG</span>
+                                    <p class="modal2">Saiba mais!</p>
+                                    <dialog class="showModal2">
+                                        <button onclick="closeModal()">X</button>
+                                        <br>
+                                        <p>Prepare-se para um novo tipo de grande aventura Pokémon em Pokémon Legends:
+                                            Arceus, um jogo totalmente novo da Game Freak que combina ação e exploração
+                                            com as raízes de RPG da série Pokémon. Embarque em missões de pesquisa na
+                                            antiga região de Hisui. Explore extensões naturais para capturar Pokémon
+                                            selvagens, aprendendo seu comportamento, aproximando-se sorrateiramente e
+                                            jogando uma Poké Ball bem direcionada. Você também pode jogar a Poké Ball
+                                            contendo seu Pokémon aliado perto de um Pokémon selvagem para entrar na
+                                            batalha sem problemas.
+                                        </p>
+                                    </dialog>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +173,6 @@
                                 <p>Data de Lançamento: 28 de Janeiro</p>
                             </li>
                             <li>
-                                <h4>Modos de jogo</h4>
                                 <p>Modo TV, Modo Semiportátil, Modo Portátil</p>
                             </li>
                         </ul>
@@ -165,6 +205,18 @@
                                     <span class="subtitle">The Legend of Zelda</span>
                                     <h4>COMPRE AGORA</h4>
                                     <span>Plataforma, Aventura, RPG</span>
+                                    <p class="modal3">Saiba mais!</p>
+                                    <dialog class="showModal3">
+                                        <button onclick="closeModal()">X</button>
+                                        <br>
+                                        <p>Link é despertado do seu sono e guiado por uma misteriosa voz feminina pelas
+                                            ruínas de Hyrule. Ele descobre com um Ancião que um ser chamado Calamidade
+                                            Ganon havia aparecido cem anos antes e destruído grande parte de Hyrule,
+                                            antes de ser selado no Castelo de Hyrule. Embora Ganon estivesse preso, o
+                                            seu poder continuava a crescer, e Link deveria derrotá-lo antes que ele se
+                                            libertasse e destruísse o resto de Hyrule.
+                                        </p>
+                                    </dialog>
                                 </div>
                             </div>
                         </div>
@@ -178,8 +230,7 @@
                                 <p>03 de Março de 2017</p>
                             </li>
                             <li>
-                                <h4>Modos de jogos compatíveis</h4>
-                                <p>Modo TV, Modo Semiportátil, Modo Portátil</p>
+                                <p style="margin-bottom: 40px;">Modo TV, Modo Semiportátil, Modo Portátil</p>
                             </li>
                         </ul>
 
@@ -199,32 +250,13 @@
         <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-
-        <div id="fade" class="hide"></div>
-        <div id="modal" class="hide">
-            <div class="modal-header">
-                <h2>Finalizar Compra</h2>
-                <button id="close-modal">Fechar</button>
-            </div>
-            <div class="modal-body">
-                <form id="purchase-form">
-                    <label for="game-select">Escolha o Jogo:</label>
-                    <select id="game-select" name="game">
-                        <option value="Mario Odyssey">Mario Odyssey</option>
-                        <option value="Pokemon Legends: Arceus">Pokemon Legends: Arceus</option>
-                        <option value="The Legend of Zelda">The Legend of Zelda</option>
-                    </select>
-                    <label for="address">Endereço:</label>
-                    <input type="text" id="address" name="address" placeholder="Digite seu endereço" required>
-                    <button type="submit">Confirmar Compra</button>
-                </form>
-            </div>
         </div>
         <footer>
             <p class="foot">&copy; 2024 Gaming Website. Todos os direitos reservados.</p>
         </footer>
     </section>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
