@@ -138,6 +138,7 @@ footer {
     width: 300px;
 }
 
+
 .search input {
     position: absolute;
     left: 0;
@@ -251,7 +252,7 @@ footer {
     width: 4%;
     height: 8%;
     top: 60%;
-    left: 82%;
+    left: 5%;
     z-index: 100;
     background-color: transparent;
     border-radius: 50%;
@@ -261,7 +262,7 @@ footer {
 
 .swiper .swiper-button-next {
     position: absolute;
-    right: 10%;
+    right: 5%;
     top: 60%;
     width: 4%;
     height: 8%;
@@ -494,7 +495,6 @@ footer {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        gap: 1rem;
     }
 
     .nav,
@@ -510,9 +510,15 @@ footer {
     .mobile-menu {
         display: block;
         position: absolute;
-        right: 10px;
+        right: 50px;
+        top: 30px;
         cursor: pointer;
         z-index: 103;
+    }
+
+    .left {
+        margin: auto;
+        text-align: center;
     }
 
     .mobile-menu div {
@@ -593,6 +599,14 @@ footer {
 
     .banner .left .features {
         margin-bottom: 3rem;
+    }
+
+    .swiper .swiper-button-prev, .swiper .swiper-button-next {
+        width: 10%;
+    }
+
+    #modal {
+        display: none;
     }
 
     .swiper .swiper-wrapper .swiper-slide .banner .right {
