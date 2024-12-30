@@ -8,12 +8,13 @@ import FiltroDeLista from './components/Filtro'
 import FormularioRegistro from './components/Form'
 import ListaDePosts from './components/Api'
 import Timer from './components/Timer'
+import Galeria from './components/Galeria'
 
 function App() {
 
   return (
     <>
-      <Timer />
+      <Galeria />
     </>
   )
 }

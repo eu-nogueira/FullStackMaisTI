@@ -1,0 +1,11 @@
+.galery li {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    transition: 1s;
+}
+
+.galery li:hover {
+    width: 250px;
+    height: 250px;
+}
