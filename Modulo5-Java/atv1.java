@@ -10,13 +10,13 @@ public class atv1 {
         System.out.println("Digite o operador (+ - * ou /)");
         String operador = scanner.nextLine();
         if(operador.equals("+")) {
-            System.out.println(number1 + number2);
+            System.out.println("O resultado da soma é: " + (number1 + number2));
         } else if (operador.equals("-")) {
-            System.out.println(number1 - number2);
+            System.out.println("O resultado da subtração é: " + (number1 - number2));
         } else if(operador.equals("*")) {
-            System.out.println(number1 * number2);
+            System.out.println("O resultado da multiplicação é: " + (number1 * number2));
         } else if(operador.equals("/")) {
-            System.out.println(number1 / number2);
+            System.out.println("O resultado da divisão é: " + (number1 / number2));
         }
     }
 }
