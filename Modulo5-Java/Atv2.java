@@ -11,6 +11,12 @@ public class Atv2 {
             reverse += palavra.charAt(c);
         }
 
-        System.out.println("Palavra invertida: " + reverse);
+        reverse = reverse.toUpperCase();
+        palavra = palavra.toUpperCase();
+        if(reverse.equals(palavra)) {
+            System.out.println("Correto: A palavra é um palíndromo");
+        } else {
+            System.out.println("Erro: A palavra não é um palíndromo");
+        }
     }
 }

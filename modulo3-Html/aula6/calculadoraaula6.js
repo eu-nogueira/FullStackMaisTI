@@ -17,4 +17,4 @@ calculadora.addEventListener('click', function(e) {
     if(el.classList.contains('num-igual')) {
         resolva()
     }
-})
+}) 
